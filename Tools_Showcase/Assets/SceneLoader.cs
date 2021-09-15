@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // Load all the scenes that the project has in the build
     void Start()
     {
         int sceneCount = SceneManager.sceneCountInBuildSettings;
@@ -14,11 +14,5 @@ public class SceneLoader : MonoBehaviour
             if(i != 0)
             SceneManager.LoadSceneAsync(i, LoadSceneMode.Additive);
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
